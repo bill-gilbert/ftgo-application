@@ -138,12 +138,12 @@ eclipse {
 
 dependencies {
 
-    compile ("io.netty:netty-codec-http2:4.1.72.Final")  
-    compile ("io.netty:netty-codec:4.1.72.Final")  
-    compile ("io.netty:netty-transport:4.1.72.Final")  
-    compile ("io.netty:netty-common:4.1.72.Final")  
-    compile ("io.netty:netty-buffer:4.1.72.Final")  
-    compile ("io.netty:netty-resolver:4.1.72.Final")  
+    compile ("io.netty:netty-codec-http2:4.1.72.Final")
+    compile ("io.netty:netty-codec:4.1.72.Final")
+    compile ("io.netty:netty-transport:4.1.72.Final")
+    compile ("io.netty:netty-common:4.1.72.Final")
+    compile ("io.netty:netty-buffer:4.1.72.Final")
+    compile ("io.netty:netty-resolver:4.1.72.Final")
 
     ftgoApiSpecification project(":ftgo-consumer-service-api-spec")
     ftgoApiSpecification project(":ftgo-accounting-service-api-spec")
@@ -182,7 +182,7 @@ dependencies {
 
     compile('org.apache.kafka:kafka-clients:2.3.0') {
         force = true
-    }    
+    }
 
     testCompile "io.eventuate.util:eventuate-util-test"
     testCompile "io.eventuate.tram.core:eventuate-tram-test-util"
@@ -192,10 +192,10 @@ dependencies {
 
     // Added this stuff
 
-    testCompile "net.chrisrichardson.ftgo:ftgo-accounting-service-contracts:unspecified:stubs"
-    testCompile "net.chrisrichardson.ftgo:ftgo-consumer-service-contracts:unspecified:stubs"
-    testCompile "net.chrisrichardson.ftgo:ftgo-kitchen-service-contracts:unspecified:stubs"
-    testCompile "org.springframework.cloud:spring-cloud-contract-wiremock"
+    testImplementation "net.chrisrichardson.ftgo:ftgo-accounting-service-contracts:unspecified:stubs"
+    testImplementation "net.chrisrichardson.ftgo:ftgo-consumer-service-contracts:unspecified:stubs"
+    testImplementation "net.chrisrichardson.ftgo:ftgo-kitchen-service-contracts:unspecified:stubs"
+    testImplementation "org.springframework.cloud:spring-cloud-contract-wiremock"
     testCompile "org.springframework.cloud:spring-cloud-starter-contract-stub-runner"
     testCompile 'io.rest-assured:rest-assured:3.0.6'
     testCompile 'io.rest-assured:spring-mock-mvc:3.0.6'
@@ -205,9 +205,9 @@ dependencies {
 
     testCompile "io.eventuate.tram.sagas:eventuate-tram-sagas-spring-testing-support"
 
-    componentTestCompile 'info.cukes:cucumber-java:1.2.5'
-    componentTestCompile 'info.cukes:cucumber-junit:1.2.5'
-    componentTestCompile 'info.cukes:cucumber-spring:1.2.5'
+    componentTestImplementation 'info.cukes:cucumber-java:1.2.5'
+    componentTestImplementation 'info.cukes:cucumber-junit:1.2.5'
+    componentTestImplementation 'info.cukes:cucumber-spring:1.2.5'
 
     testCompile project(":ftgo-test-util")
     testCompile "org.hamcrest:hamcrest:2.1"
